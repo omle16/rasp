@@ -1,5 +1,5 @@
 #!/bin/bash
 #reboot
 
-sshpass -p raspberry ssh pi@192.168.178.33 sudo reboot
+sshpass -p pi ssh pi@192.168.178.33 sudo reboot
 echo "rebooting..."

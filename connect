@@ -1,6 +1,5 @@
 #!/bin/bash
 # Used to connect with SSH 
 
-sshpass -p raspberry ssh pi@192.168.178.33
-echo "Conexion done!"
-exit
+sudo sshpass -p pi ssh pi@192.168.178.33
+
