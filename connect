@@ -1,5 +1,5 @@
 #!/bin/bash
 # Used to connect with SSH 
 
-sudo sshpass -p pi ssh pi@192.168.178.33
+sshpass -p pi ssh pi@192.168.178.33
 
