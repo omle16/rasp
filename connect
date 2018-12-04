@@ -2,5 +2,6 @@
 # Used to connect with SSH 
 
 #comment added for testing
+#more testing
 sshpass -p pi ssh pi@192.168.178.33
 
