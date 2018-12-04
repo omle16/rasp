@@ -3,5 +3,6 @@
 
 #comment added for testing
 #more testing
+#this gotta be inside
 sshpass -p pi ssh pi@192.168.178.33
 
