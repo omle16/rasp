@@ -1,5 +1,12 @@
 #!/bin/bash
 # used to ping the raspberry pi
 
-ping 192.168.178.33
+IP='192.168.178.33'
+fping -c1 -t200 $IP 2>/dev/null 1>/dev/null
 
+if [ "$?" = 0 ]
+then
+  echo "Host found"
+else
+  echo "Host not found"
+fi
