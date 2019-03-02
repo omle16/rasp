@@ -2,6 +2,7 @@
 #reboot
 
 IP='192.168.178.33'
+LOGFILE=pi.log
 sudo sshpass -p pi ssh pi@$IP sudo reboot
 fping -cl -t500 $IP 2>/dev/null 1>/dev/null
 
@@ -11,3 +12,4 @@ then
 else
   echo "$IP Rebooting "
 fi
+echo "$(date +%F):$(date +%T): Pi rebooted$*" >> $LOGFILE

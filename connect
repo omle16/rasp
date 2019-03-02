@@ -1,9 +1,12 @@
 #!/bin/bash
 # Used to connect with SSH 
+
+LOGFILE=pi.log
 sudo
 if [ -z `ssh-keygen -F 192.168.178.33` ]; then
   ssh-keyscan -H 192.168.178.33 >> ~/.ssh/known_hosts
 fi
 
 sshpass -p pi ssh pi@192.168.178.33
+echo "$(date +%F):$(date +%T): Connected to pi$*" >> $LOGFILE
 

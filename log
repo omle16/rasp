@@ -1,0 +1,5 @@
+FILEDATE=`date +%F`
+LOGFILE=/home/work/backup.$FILEDATE.log
+touch $LOGFILE
+
+echo "message $variable message"  >> $LOGFILE

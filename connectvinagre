@@ -1,10 +1,13 @@
 #!/bin/bash
 # This script is used to connect using vinagre
 
-#sshpass -p raspberry ssh pi@192.168.178.33
-sudo sshpass -p pi ssh pi@192.168.178.33 tightvncserver
-sleep 1
-#sshpass -p raspberry ssh pi@192.168.178.33 ls
+IP='192.168.178.33'
+LOGFILE=pi.log
+
+echo "$(date +%F):$(date +%T): Connected to pi with tightvncserver$*" >> $LOGFILE
+sudo sshpass -p pi ssh pi@$IP tightvncserver
 echo "Conexion done!"
-vinagre 192.168.178.33:1
+sleep 1
+
+vinagre $IP:1
 exit

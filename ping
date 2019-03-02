@@ -2,11 +2,14 @@
 # used to ping the raspberry pi
 
 IP='192.168.178.33'
+LOGFILE=pi.log
 fping -c1 -t200 $IP 2>/dev/null 1>/dev/null
 
 if [ "$?" = 0 ]
 then
   echo "Host found"
+  echo "$(date +%F):$(date +%T): Pi pinged and found$*" >> $LOGFILE
 else
   echo "Host not found"
+  echo "$(date +%F):$(date +%T): Pi pinged and not found$*" >> $LOGFILE
 fi
