@@ -1,8 +1,9 @@
 #!/bin/bash
 # Used to connect with SSH 
+sudo
+if [ -z `ssh-keygen -F 192.168.178.33` ]; then
+  ssh-keyscan -H 192.168.178.33 >> ~/.ssh/known_hosts
+fi
 
-#comment added for testing
-#more testing
-#this gotta be inside
 sshpass -p pi ssh pi@192.168.178.33
 
