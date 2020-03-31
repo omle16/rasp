@@ -3,5 +3,4 @@
 
 IP='192.168.178.33'
 
-sudo scp /home/6DOFRobot/app/PCA9685.py pi@$IP:/home/app
-
+sudo scp /home/6DOFRobot/app/axis.py pi@$PI:/home/app
